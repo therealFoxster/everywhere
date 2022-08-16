@@ -22,9 +22,9 @@ $("#dark-appearance-switch").on("change", function () {
 })
 
 function darkAppearance() {
-  $("body, .cell, .cell-group, .action-icon").addClass("dark");
+  $("body, .icon, .cell, .cell-group, .action-icon").addClass("dark");
 }
 
 function lightAppearance() {
-  $("body, .cell, .cell-group, .action-icon").removeClass("dark");
+  $("body, .icon, .cell, .cell-group, .action-icon").removeClass("dark");
 }

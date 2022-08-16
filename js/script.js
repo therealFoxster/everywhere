@@ -36,10 +36,10 @@ $.getJSON("data.json", function (json) {
 
 function clickableCell(isFirst = false, bootstrapIcon, icon, url, title, subtitle, actionIcon) {
   return `
-  <a class="${prefersDarkAppearance.matches ? "dark " : ""}clickable ${isFirst ? "first " : ""}cell" href=${url} target="_blank">
+  <a class="${prefersDarkAppearance.matches ? "dark " : ""}${isFirst ? "first " : ""}clickable cell" href=${url} target="_blank">
     <div class="cell-icon">
       ${icon != null && icon != undefined
-        ? `<img src="${icon}" alt="${bootstrapIcon}" class="icon">`
+    ? `<img src="${icon}" alt="${bootstrapIcon}" class="${prefersDarkAppearance.matches ? "dark " : ""}icon">`
         : `<i class="bi bi-${bootstrapIcon}"></i>`
       }
     </div>
