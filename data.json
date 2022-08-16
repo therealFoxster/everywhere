@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "name": "GitHub",
+      "bootstrapIcon": "github",
+      "icon": "icons/github.png",
+      "accounts": [
+        {
+          "url": "https://github.com/foxster-mp4",
+          "name": "foxster-mp4",
+          "description": "Personal profile"
+        },
+        {
+          "url": "https://github.com/huybui-dc",
+          "name": "huybui-dc",
+          "description": "School profile"
+        }
+      ]
+    },
+    {
+      "name": "YouTube",
+      "bootstrapIcon": "youtube",
+      "icon": "icons/youtube.png",
+      "accounts": [
+        {
+          "url": "https://www.youtube.com/c/FoxsterFanmade",
+          "name": "Foxster",
+          "description": "Music promotion channel"
+        },
+        {
+          "url": "https://www.youtube.com/c/foxster-mp4",
+          "name": "foxster.mp4",
+          "description": "Personal channel"
+        }
+      ]
+    },
+    {
+      "name": "Social network",
+      "platforms": [
+        {
+          "name": "LinkedIn",
+          "bootstrapIcon": "linkedin",
+          "icon": "icons/linkedin.png",
+          "accounts": [
+            {
+              "url": "https://www.linkedin.com/in/huybui-dev/",
+              "name": "huybui-dev"
+            }
+          ]
+        },
+        {
+          "name": "Instagram",
+          "bootstrapIcon": "instagram",
+          "icon": "icons/instagram.png",
+          "accounts": [
+            {
+              "url": "https://www.instagram.com/foxster.ig/",
+              "name": "foxster.ig",
+              "description": "@foxster.ig"
+            }
+          ]
+        },
+        {
+          "name": "Twitter",
+          "bootstrapIcon": "twitter",
+          "icon": "icons/twitter.png",
+          "accounts": [
+            {
+              "url": "https://twitter.com/FoxsterPrivate",
+              "name": "foxster.mp4",
+              "description": "@FoxsterPrivate"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
