@@ -38,25 +38,25 @@
       "name": "Social network",
       "platforms": [
         {
-          "name": "LinkedIn",
-          "bootstrapIcon": "linkedin",
-          "icon": "icons/linkedin.png",
-          "accounts": [
-            {
-              "url": "https://www.linkedin.com/in/huybui-dev/",
-              "name": "huybui-dev"
-            }
-          ]
-        },
-        {
           "name": "Instagram",
           "bootstrapIcon": "instagram",
           "icon": "icons/instagram.png",
           "accounts": [
             {
               "url": "https://www.instagram.com/foxster.ig/",
-              "name": "foxster.ig",
-              "description": "@foxster.ig"
+              "name": "foxster.ig"
+            }
+          ]
+        },
+        {
+          "name": "Reddit",
+          "bootstrapIcon": "reddit",
+          "icon": "icons/reddit.png",
+          "accounts": [
+            {
+              "url": "https://www.reddit.com/user/therealFoxster",
+              "name": "foxster.mp4",
+              "description": "u/therealFoxster"
             }
           ]
         },
@@ -69,6 +69,17 @@
               "url": "https://twitter.com/FoxsterPrivate",
               "name": "foxster.mp4",
               "description": "@FoxsterPrivate"
+            }
+          ]
+        },
+        {
+          "name": "LinkedIn",
+          "bootstrapIcon": "linkedin",
+          "icon": "icons/linkedin.png",
+          "accounts": [
+            {
+              "url": "https://www.linkedin.com/in/huybui-dev/",
+              "name": "huybui-dev"
             }
           ]
         }

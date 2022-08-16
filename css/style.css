@@ -57,7 +57,6 @@ h1 { margin-top: 50px; }
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 .cell-content {
   min-height: 28px;
