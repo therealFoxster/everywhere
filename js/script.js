@@ -1,7 +1,7 @@
+const prefersDarkAppearance = window.matchMedia("(prefers-color-scheme: dark)");
 $.getJSON("data.json", function (json) {
   const data = json.data;
   const openIcon = "bi-arrow-up-right-square";
-  const prefersDarkAppearance = window.matchMedia("(prefers-color-scheme: dark)");
 
   if (data != null && data != undefined)
     $("#error").remove();
@@ -36,7 +36,7 @@ $.getJSON("data.json", function (json) {
 
 function clickableCell(isFirst = false, bootstrapIcon, icon, url, title, subtitle, actionIcon) {
   return `
-  <a class="clickable ${isFirst ? "first " : ""}cell" href=${url} target="_blank">
+  <a class="${prefersDarkAppearance.matches ? "dark " : ""}clickable ${isFirst ? "first " : ""}cell" href=${url} target="_blank">
     <div class="cell-icon">
       ${icon != null && icon != undefined
         ? `<img src="${icon}" alt="${bootstrapIcon}" class="icon">`

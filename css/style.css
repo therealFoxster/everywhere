@@ -134,7 +134,7 @@ body.dark {
 .dark.clickable.cell:active,
 .dark.clickable.cell:focus {
   transition: none;
-  background-color: rgba(58, 58, 60, 255)!important;
+  background-color: rgba(58, 58, 60, 255) !important;
 }
 
 .dark.cell-group .cell .cell-content {
