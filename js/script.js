@@ -1,6 +1,8 @@
 const genericAppIcon = "icons/generic_app.jpeg";
 const accessoryIcon = "bi-arrow-up-right-square";
 
+setupAppearance();
+
 $.getJSON("data.json", function (json) {
   const data = json.data;
 
