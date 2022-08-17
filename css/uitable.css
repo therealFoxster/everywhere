@@ -26,6 +26,9 @@ MIT License
   
   --cell-highlight-dark: rgba(58, 58, 60, 255);
   --icon-border-dark: rgba(255, 255, 255, 0.25);
+  --grey-accessory-icon-color: rgba(197, 197, 198, 255);
+  --grey-accessory-icon-color-dark: rgba(89, 89, 93, 255);
+  --transition-effect: 0.5s;
 }
 
 .uitable {
@@ -93,6 +96,13 @@ MIT License
   color: unset;
   text-decoration: none;
 }
+/* Disabled cell */
+.uitable .disabled.cell {
+  pointer-events: none;
+}
+.uitable .disabled.cell div {
+  opacity: 60%;
+}
 
 /* Cell icon */
 .uitable .cell-icon {
@@ -116,6 +126,9 @@ MIT License
   -webkit-text-stroke: 0.25px;
   margin-left: 5px;
 }
+.uitable .grey.cell-accessory-icon i {
+  color: var(--grey-accessory-icon-color);
+}
 
 /* Texts */
 .uitable #title {
@@ -136,41 +149,6 @@ MIT License
 .uitable .cell-detail-text {
   font-size: 14px;
   opacity: 0.5;
-}
-
-/* Transitions */
-.uitable {
-  transition: background 0.5s ease-out, color 0.5s ease-out;
-}
-.uitable .cell,
-.uitable .section {
-  transition: background 0.5s ease-out;
-}
-.uitable .cell-accessory-icon i {
-  transition: color 0.5s ease-out;
-}
-
-/* Manual dark mode styles (for use with uitable.js) */
-.dark.uitable {
-  background: var(--table-background-dark);
-  color: white;
-}
-.uitable .dark.cell {
-  background: var(--cell-background-dark);
-}
-.uitable .dark.section .cell .cell-inner {
-  border-top-color: var(--cell-separator-dark);
-}
-.uitable .dark.clickable.cell:active,
-.uitable .dark.clickable.cell:focus {
-  transition: none;
-  background-color: var(--cell-highlight-dark) !important;
-}
-.uitable .dark.icon {
-  border-color: var(--icon-border-dark);
-}
-.uitable .dark.cell-accessory-icon i {
-  color: var(--primary-color-dark);
 }
 
 /* Auto dark mode styles (no JavaScript) */
@@ -196,4 +174,45 @@ MIT License
   .uitable .cell-accessory-icon i {
     color: var(--primary-color-dark);
   }
+  .uitable .grey.cell-accessory-icon i {
+    color: var(--grey-accessory-icon-color-dark);
+  }
 } */
+
+/* Manual dark mode styles (for use with uitable.js; must disable @media (prefers-color-scheme: dark) first) */
+.dark.uitable {
+  background: var(--table-background-dark);
+  color: white;
+}
+.uitable .dark.cell {
+  background: var(--cell-background-dark);
+}
+.uitable .dark.section .cell .cell-inner {
+  border-top-color: var(--cell-separator-dark);
+}
+.uitable .dark.clickable.cell:active,
+.uitable .dark.clickable.cell:focus {
+  transition: none;
+  background-color: var(--cell-highlight-dark) !important;
+}
+.uitable .dark.icon {
+  border-color: var(--icon-border-dark);
+}
+.uitable .dark.cell-accessory-icon i {
+  color: var(--primary-color-dark);
+}
+.uitable .dark.grey.cell-accessory-icon i {
+  color: var(--grey-accessory-icon-color-dark);
+}
+
+/* Transitions */
+.uitable {
+  transition: background var(--transition-effect), color var(--transition-effect);
+}
+.uitable .cell,
+.uitable .section {
+  transition: background var(--transition-effect);
+}
+.uitable .cell-accessory-icon i {
+  transition: color var(--transition-effect);
+}

@@ -6,7 +6,8 @@
  * MIT License
  */
 
-// Call these functions to trigger appearance change
+// Call these functions to trigger appearance change 
+// Must remove @media (prefers-color-scheme: dark) first
 function uiTableDark() {
   document.querySelectorAll(".uitable, .uitable .icon, .uitable .cell, .uitable .cell-accessory-icon").forEach(e => e.classList.add("dark"));
 }
