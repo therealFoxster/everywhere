@@ -9,8 +9,8 @@
 // Call these functions to trigger appearance change 
 // Must remove @media (prefers-color-scheme: dark) first
 function uiTableDark() {
-  document.querySelectorAll(".uitable, .uitable .icon, .uitable .cell, .uitable .cell-accessory-icon").forEach(e => e.classList.add("dark"));
+  document.querySelectorAll("#uitable, #uitable .icon, #uitable .cell, #uitable .cell-accessory-icon").forEach(e => e.classList.add("dark"));
 }
 function uiTableLight() {
-  document.querySelectorAll(".uitable, .uitable .icon, .uitable .cell, .uitable .cell-accessory-icon").forEach(e => e.classList.remove("dark"));
+  document.querySelectorAll("#uitable, #uitable .icon, #uitable .cell, #uitable .cell-accessory-icon").forEach(e => e.classList.remove("dark"));
 }

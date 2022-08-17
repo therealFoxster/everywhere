@@ -11,7 +11,7 @@ MIT License
   margin: 0;
 }
 
-.uitable {
+#uitable {
   --primary-color: rgba(0, 122, 254, 255);
   --primary-color-dark: rgba(11, 132, 254, 255);
   
@@ -31,53 +31,53 @@ MIT License
   --transition-effect: 0.5s;
 }
 
-.uitable {
+#uitable {
   padding-bottom: 50px;
   background: var(--table-background);
 }
 
 /* Section */
-.uitable .section-container {
+#uitable .section-container {
   margin-top: 30px;
 }
 /* Separator for cells in section */
-.uitable .section .cell:first-of-type .cell-inner { border-top: none !important; }
-.uitable .section .cell .cell-inner {
+#uitable .section .cell:first-of-type .cell-inner { border-top: none !important; }
+#uitable .section .cell .cell-inner {
   border-top: 0.5px solid var(--cell-separator);
 }
 
 /* Rounded section */
-.uitable .section-container.rounded {
+#uitable .section-container.rounded {
   margin-left: 16px;
   margin-right: 16px;
 }
-.uitable .section-container.rounded .section,
-.uitable .section-container.rounded .cell {
+#uitable .section-container.rounded .section,
+#uitable .section-container.rounded .cell {
   border-radius: 10px;
 }
 /* First cell (rounded top corners) */
-.uitable .section-container.rounded .section .cell:first-of-type { 
+#uitable .section-container.rounded .section .cell:first-of-type { 
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 /* Middle cells (no rounded corners) */
-.uitable .section-container.rounded .section .cell {
+#uitable .section-container.rounded .section .cell {
   border-radius: 0px;
 }
 /* Last cell (rounded bottom corner) */
-.uitable .section-container.rounded .section .cell:last-of-type {
+#uitable .section-container.rounded .section .cell:last-of-type {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
 /* Cell */
-.uitable .cell {
+#uitable .cell {
   background: var(--cell-background);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.uitable .cell-inner {
+#uitable .cell-inner {
   min-height: 28px;
   width: 100%;
   padding: 8px 16px 8px 0px;
@@ -87,132 +87,132 @@ MIT License
   align-items: center;
 }
 /* Clickable cell */
-.uitable .clickable.cell:active {
+#uitable .clickable.cell:active {
   transition: none;
   background-color: rgba(209, 209, 213, 255);
 }
-.uitable .clickable.cell,
-.uitable .clickable.cell:visited {
+#uitable .clickable.cell,
+#uitable .clickable.cell:visited {
   color: unset;
   text-decoration: none;
 }
 /* Disabled cell */
-.uitable .disabled.cell {
+#uitable .disabled.cell {
   pointer-events: none;
 }
-.uitable .disabled.cell div {
+#uitable .disabled.cell div {
   opacity: 60%;
 }
 
 /* Cell icon */
-.uitable .cell-icon {
+#uitable .cell-icon {
   margin-left: 14px;
   display: flex;
 }
-.uitable .cell-icon i.bi {
+#uitable .cell-icon i.bi {
   font-size: 20pt;
   position: relative;
   top: 1px;
 }
-.uitable .icon {
+#uitable .icon {
   max-width: 30px;
   border-radius: 7px;
   border: 0.75px solid rgba(0, 0, 0, 0.1);
 }
 /* Cell accessory icon */
-.uitable .cell-accessory-icon i {
+#uitable .cell-accessory-icon i {
   color: var(--primary-color);
   font-size: 20px;
   -webkit-text-stroke: 0.25px;
   margin-left: 5px;
 }
-.uitable .grey.cell-accessory-icon i {
+#uitable .grey.cell-accessory-icon i {
   color: var(--grey-accessory-icon-color);
 }
 
 /* Texts */
-.uitable #title {
+#uitable #title {
   padding-top: 50px;
   margin-left: 16px;
 }
-.uitable .section-header { text-transform: uppercase; }
-.uitable .section-header,
-.uitable .section-footer {
+#uitable .section-header { text-transform: uppercase; }
+#uitable .section-header,
+#uitable .section-footer {
   padding: 5px 14px;
   font-weight: normal;
   font-size: 10pt;
   opacity: 0.5;
 }
-.uitable .cell-text {
+#uitable .cell-text {
   font-size: 17px;
 }
-.uitable .cell-detail-text {
+#uitable .cell-detail-text {
   font-size: 14px;
   opacity: 0.5;
 }
 
 /* Auto dark mode styles (no JavaScript) */
 /* @media (prefers-color-scheme: dark) {
-  .uitable {
+  #uitable {
     background: var(--table-background-dark);
     color: white;
   }
-  .uitable .cell {
+  #uitable .cell {
     background: var(--cell-background-dark);
   }
-  .uitable .section .cell .cell-inner {
+  #uitable .section .cell .cell-inner {
     border-top-color: var(--cell-separator-dark);
   }
-  .uitable .clickable.cell:active,
-  .uitable .clickable.cell:focus {
+  #uitable .clickable.cell:active,
+  #uitable .clickable.cell:focus {
     transition: none;
     background-color: var(--cell-highlight-dark) !important;
   }
-  .uitable .icon {
+  #uitable .icon {
     border-color: var(--icon-border-dark);
   }
-  .uitable .cell-accessory-icon i {
+  #uitable .cell-accessory-icon i {
     color: var(--primary-color-dark);
   }
-  .uitable .grey.cell-accessory-icon i {
+  #uitable .grey.cell-accessory-icon i {
     color: var(--grey-accessory-icon-color-dark);
   }
 } */
 
 /* Manual dark mode styles (for use with uitable.js; must disable @media (prefers-color-scheme: dark) first) */
-.dark.uitable {
+.dark#uitable {
   background: var(--table-background-dark);
   color: white;
 }
-.uitable .dark.cell {
+#uitable .dark.cell {
   background: var(--cell-background-dark);
 }
-.uitable .dark.section .cell .cell-inner {
+#uitable .dark.section .cell .cell-inner {
   border-top-color: var(--cell-separator-dark);
 }
-.uitable .dark.clickable.cell:active,
-.uitable .dark.clickable.cell:focus {
+#uitable .dark.clickable.cell:active,
+#uitable .dark.clickable.cell:focus {
   transition: none;
   background-color: var(--cell-highlight-dark) !important;
 }
-.uitable .dark.icon {
+#uitable .dark.icon {
   border-color: var(--icon-border-dark);
 }
-.uitable .dark.cell-accessory-icon i {
+#uitable .dark.cell-accessory-icon i {
   color: var(--primary-color-dark);
 }
-.uitable .dark.grey.cell-accessory-icon i {
+#uitable .dark.grey.cell-accessory-icon i {
   color: var(--grey-accessory-icon-color-dark);
 }
 
 /* Transitions */
-.uitable {
+#uitable {
   transition: background var(--transition-effect), color var(--transition-effect);
 }
-.uitable .cell,
-.uitable .section {
+#uitable .cell,
+#uitable .section {
   transition: background var(--transition-effect);
 }
-.uitable .cell-accessory-icon i {
+#uitable .cell-accessory-icon i {
   transition: color var(--transition-effect);
 }

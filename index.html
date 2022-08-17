@@ -13,51 +13,49 @@
     .uiswitch { background-color: rgba(233, 233, 234, 255); }
   </style>
 </head>
-<body>
-  <div class="uitable">
-    <h1 id="title">Everywhere</h1>
-    <div class="rounded section-container" id="loading">
+<body id="uitable">
+  <h1 id="title">Everywhere</h1>
+  <div class="rounded section-container" id="loading">
+    <div class="cell">
+      <div class="cell-icon">
+        <i class="bi bi-filetype-js"></i>
+      </div>
+      <div class="cell-inner">
+        <div class="cell-labels">
+          <p class="cell-text">Loading...</p>
+        </div>
+      </div>
+    </div>
+    <p class="section-footer">The page is either taking really long to load or was not properly loaded. Please make sure JavaScript is enabled in browser settings. You can also try refreshing the page.</p>
+  </div>
+  <div class="rounded section-container" id="dark">
+    <div class="section">
       <div class="cell">
-        <div class="cell-icon">
-          <i class="bi bi-filetype-js"></i>
+      <div class="cell-inner">
+        <p class="cell-text">Dark Appearance</p>
+        <input type="checkbox" class="uiswitch" id="dark-appearance-switch">
+      </div>
+    </div>
+    </div>
+    <p class="section-footer">This option will automatically adjust based on your system appearance. Disable this option to get blinded at night.</p>
+  </div>
+  <div class="rounded section-container" id="source-code">
+    <p class="section-header">Source code</p>
+    <a class="clickable cell" href="https://github.com/foxster-mp4/everywhere" target="_blank">
+      <div class="cell-icon">
+        <i class="bi bi-github"></i>
+      </div>
+      <div class="cell-inner">
+        <div class="cell-labels">
+          <p class="cell-text">everywhere</p>
+          <p class="cell-detail-text">github.com/foxster-mp4/everywhere</p>
         </div>
-        <div class="cell-inner">
-          <div class="cell-labels">
-            <p class="cell-text">Loading...</p>
-          </div>
+        <div class="cell-accessory-icon">
+          <i class="bi bi-arrow-up-right-square"></i>
         </div>
       </div>
-      <p class="section-footer">The page is either taking really long to load or was not properly loaded. Please make sure JavaScript is enabled in browser settings. You can also try refreshing the page.</p>
-    </div>
-    <div class="rounded section-container" id="dark">
-      <div class="section">
-        <div class="cell">
-        <div class="cell-inner">
-          <p class="cell-text">Dark Appearance</p>
-          <input type="checkbox" class="uiswitch" id="dark-appearance-switch">
-        </div>
-      </div>
-      </div>
-      <p class="section-footer">This option will automatically adjust based on your system appearance. Disable this option to get blinded at night.</p>
-    </div>
-    <div class="rounded section-container" id="source-code">
-      <p class="section-header">Source code</p>
-      <a class="clickable cell" href="https://github.com/foxster-mp4/everywhere" target="_blank">
-        <div class="cell-icon">
-          <i class="bi bi-github"></i>
-        </div>
-        <div class="cell-inner">
-          <div class="cell-labels">
-            <p class="cell-text">everywhere</p>
-            <p class="cell-detail-text">github.com/foxster-mp4/everywhere</p>
-          </div>
-          <div class="cell-accessory-icon">
-            <i class="bi bi-arrow-up-right-square"></i>
-          </div>
-        </div>
-      </a>
-      <p class="section-footer" style="text-align: center;">foxster, August 2022</p>
-    </div>
+    </a>
+    <p class="section-footer" style="text-align: center;">foxster, August 2022</p>
   </div>
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
