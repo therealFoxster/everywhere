@@ -18,7 +18,7 @@ $.getJSON("data.json", function (json) {
       const bootstrapIcon = account.bootstrapIcon ?? section.bootstrapIcon;
       const icon = account.icon ?? section.icon;
       sectionHTML += `
-        <a class="clickable cell" href="#" >
+        <a class="clickable cell" href="${account.url}" target="_blank">
           <div class="cell-icon">
             ${icon
               ? `<img src="${icon}" alt="${bootstrapIcon}" class="icon">`
