@@ -1,9 +1,9 @@
 {
   "data": [
     {
-      "name": "GitHub",
-      "bootstrapIcon": "github",
+      "section": "GitHub",
       "icon": "icons/github.png",
+      "bootstrapIcon": "github",
       "accounts": [
         {
           "url": "https://github.com/foxster-mp4",
@@ -18,9 +18,9 @@
       ]
     },
     {
-      "name": "YouTube",
-      "bootstrapIcon": "youtube",
+      "section": "YouTube",
       "icon": "icons/youtube.png",
+      "bootstrapIcon": "youtube",
       "accounts": [
         {
           "url": "https://www.youtube.com/c/FoxsterFanmade",
@@ -35,53 +35,33 @@
       ]
     },
     {
-      "name": "Social network",
-      "platforms": [
+      "section": "Social network",
+      "accounts": [
         {
-          "name": "Instagram",
-          "bootstrapIcon": "instagram",
           "icon": "icons/instagram.png",
-          "accounts": [
-            {
-              "url": "https://www.instagram.com/foxster.ig/",
-              "name": "foxster.ig"
-            }
-          ]
+          "bootstrapIcon": "instagram",
+          "url": "https://www.instagram.com/foxster.ig/",
+          "name": "foxster.ig"
         },
         {
-          "name": "Reddit",
-          "bootstrapIcon": "reddit",
           "icon": "icons/reddit.png",
-          "accounts": [
-            {
-              "url": "https://www.reddit.com/user/therealFoxster",
-              "name": "foxster.mp4",
-              "description": "u/therealFoxster"
-            }
-          ]
+          "bootstrapIcon": "reddit",
+          "url": "https://www.reddit.com/user/therealFoxster",
+          "name": "foxster.mp4",
+          "description": "u/therealFoxster"
         },
         {
-          "name": "Twitter",
-          "bootstrapIcon": "twitter",
           "icon": "icons/twitter.png",
-          "accounts": [
-            {
-              "url": "https://twitter.com/FoxsterPrivate",
-              "name": "foxster.mp4",
-              "description": "@FoxsterPrivate"
-            }
-          ]
+          "bootstrapIcon": "twitter",
+          "url": "https://twitter.com/FoxsterPrivate",
+          "name": "foxster.mp4",
+          "description": "@FoxsterPrivate"
         },
         {
-          "name": "LinkedIn",
-          "bootstrapIcon": "linkedin",
           "icon": "icons/linkedin.png",
-          "accounts": [
-            {
-              "url": "https://www.linkedin.com/in/huybui-dev/",
-              "name": "huybui-dev"
-            }
-          ]
+          "bootstrapIcon": "linkedin",
+          "url": "https://www.linkedin.com/in/huybui-dev/",
+          "name": "huybui-dev"
         }
       ]
     }

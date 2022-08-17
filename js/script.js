@@ -1,54 +1,75 @@
-const prefersDarkAppearance = window.matchMedia("(prefers-color-scheme: dark)");
+const genericAppIcon = "icons/generic_app.jpeg";
+const accessoryIcon = "bi-arrow-up-right-square";
+
 $.getJSON("data.json", function (json) {
   const data = json.data;
-  const openIcon = "bi-arrow-up-right-square";
 
   if (data != null && data != undefined)
-    $("#error").remove();
+    $("#loading").remove();
   else return;
 
-  data.forEach(item => {
-    let html = `
-      <div class="section">
-        <p class="cell-header">${item.name}</p>
-        <div class="${prefersDarkAppearance.matches ? "dark " : ""}cell-group">`;
+  data.forEach(section => {
+    let sectionHTML = `
+    <div class="section-container rounded">
+      <p class="section-header">${section.section}</p>
+      <div class="section">`;
 
-    if (item.accounts != null && item.accounts != undefined) {
-      item.accounts.forEach((account, i) => {
-        html += clickableCell(i == 0, item.bootstrapIcon, item.icon, account.url, account.name, account.description, openIcon);
-      });
-    } else if (item.platforms != null && item.platforms != undefined) {
-      item.platforms.forEach((platform, i) => {
-        platform.accounts.forEach((account, j) => {
-          let isFirst = i == 0 && j == 0; // First account of first platform
-          html += clickableCell(isFirst, platform.bootstrapIcon, platform.icon, account.url, account.name, account.description, openIcon);
-        });
-      });
-    }
-
-    html += `
-        </div>
-      </div>`;
-
-    $("#dark").last().before(html);
+    section.accounts.forEach((account, i) => {
+      const bootstrapIcon = account.bootstrapIcon ?? section.bootstrapIcon;
+      const icon = account.icon ?? section.icon;
+      sectionHTML += `
+        <a class="clickable cell" href="#" >
+          <div class="cell-icon">
+            ${icon
+              ? `<img src="${icon}" alt="${bootstrapIcon}" class="icon">`
+              : bootstrapIcon
+                ? `<i class="bi bi-${bootstrapIcon}"></i>`
+                : `<img src="${genericAppIcon}" alt="generic_app_icon" class="icon">`
+            }
+          </div>
+          <div class="cell-inner">
+            <div class="cell-labels">
+              <p class="cell-text">${account.name}</p>
+              <p class="cell-detail-text">${account.description ?? ""}</p>
+            </div>
+            <div class="cell-accessory-icon">
+              <i class="bi ${accessoryIcon}"></i>
+            </div>
+          </div>
+        </a>`;
     });
-})
 
-function clickableCell(isFirst = false, bootstrapIcon, icon, url, title, subtitle, actionIcon) {
-  return `
-  <a class="${prefersDarkAppearance.matches ? "dark " : ""}${isFirst ? "first " : ""}clickable cell" href=${url} target="_blank">
-    <div class="cell-icon">
-      ${icon != null && icon != undefined
-    ? `<img src="${icon}" alt="${bootstrapIcon}" class="${prefersDarkAppearance.matches ? "dark " : ""}icon">`
-        : `<i class="bi bi-${bootstrapIcon}"></i>`
-      }
-    </div>
-    <div class="cell-content">
-      <div class="cell-text">
-        <p class="cell-title">${title}</p>
-        <p class="cell-subtitle">${subtitle ?? ""}</p>
+    sectionHTML += `
       </div>
-      <i class="bi ${actionIcon} action-icon"></i>
-    </div>
-  </a>`;
+    </div>`;
+
+    $("#dark").before(sectionHTML);
+  });
+
+  setupAppearance();
+});
+
+function setupAppearance() {
+  const prefersDarkAppearance = window.matchMedia("(prefers-color-scheme: dark)");
+  if (prefersDarkAppearance.matches) {
+    uiTableDark();
+    $("#dark-appearance-switch").prop('checked', true);
+  } else {
+    uiTableLight();
+  }
+
+  // Toggle dark appearance by listenning to system appearance changes
+  prefersDarkAppearance.addEventListener("change", (e) => {
+    if (e.matches) {
+      uiTableDark();
+      $("#dark-appearance-switch").prop('checked', true);
+    } else {
+      uiTableLight();
+      $("#dark-appearance-switch").prop('checked', false);
+    }
+  });
+
+  $("#dark-appearance-switch").on("change", function () {
+    this.checked ? uiTableDark() : uiTableLight();
+  });
 }
