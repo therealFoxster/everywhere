@@ -6,8 +6,10 @@ setupAppearance();
 $.getJSON("data.json", function (json) {
   const data = json.data;
 
-  if (data != null && data != undefined)
+  if (data != null && data != undefined) {
     $("#loading").remove();
+    $("#dark .cell").removeClass("disabled");
+  }
   else return;
 
   data.forEach(section => {
