@@ -2,6 +2,21 @@ const genericAppIcon = "icons/generic_app.jpeg";
 const accessoryIcon = "bi-arrow-up-right-square";
 
 setupAppearance();
+(() => {
+  const darkSwitch = `
+  <div class="section-container" id="dark">
+    <div class="rounded section">
+      <div class="disabled cell">
+        <div class="cell-inner">
+          <p class="cell-text">Dark Appearance</p>
+          <input type="checkbox" class="uiswitch" id="dark-appearance-switch">
+        </div>
+      </div>
+      <p class="section-footer">This option will automatically adjust based on your system appearance. Disable this option to get blinded at night.</p>
+    </div>
+  </div>`; 
+  $("#title").after(darkSwitch);
+})()
 
 $.getJSON("data.json", function (json) {
   const profile = json.profile;
