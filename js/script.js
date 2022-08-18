@@ -101,7 +101,7 @@ function setupAppearance() {
 }
 
 function performVeryImportantTask() {
-  confirm(`Don't click ${Math.random() < 0.5 ? 'Cancel' : 'OK'}.`);
-  window.open('https:\/\/youtu.be/dQw4w9WgXcQ', '_blank');
-  // return false;
+  // confirm(`Don't click ${Math.random() < 0.5 ? 'Cancel' : 'OK'}.`);
+  if (confirm(`Don't click "OK".`))
+    window.open('https://youtu.be/dQw4w9WgXcQ', '_blank');
 }
