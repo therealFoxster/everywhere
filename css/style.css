@@ -1,6 +1,4 @@
-html {
-  visibility: hidden;
-}
+html { visibility: hidden; }
 .uiswitch {
   background-color: rgba(233, 233, 234, 255);
 }

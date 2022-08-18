@@ -1,6 +1,10 @@
 const genericAppIcon = "icons/generic_app.jpeg";
 const accessoryIcon = "bi-arrow-up-right-square";
 
+$(window).on("load", function () {
+  $("html").css("visibility", "visible");
+});
+
 setupAppearance(); (() => {
   const darkSwitch = `
   <div class="section-container" id="dark">
@@ -86,7 +90,6 @@ $.getJSON("data.json", function (json) {
   });
 
   setupAppearance();
-  $("html").css("visibility", "visible");
 });
 
 function setupAppearance() {
