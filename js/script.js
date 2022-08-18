@@ -5,7 +5,7 @@ setupAppearance(); (() => {
   const darkSwitch = `
   <div class="section-container" id="dark">
     <div class="rounded section">
-      <div class="disabled cell">
+      <div class="cell">
         <div class="cell-inner">
           <p class="cell-text">Dark Appearance</p>
           <input type="checkbox" class="uiswitch" id="dark-appearance-switch">
@@ -44,7 +44,6 @@ $.getJSON("data.json", function (json) {
   const data = json.data;
   if (data) {
     $("#loading").remove();
-    $("#dark .cell").removeClass("disabled");
   }
   else return;
 
