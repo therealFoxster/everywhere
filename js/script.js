@@ -54,24 +54,24 @@ $.getJSON("data.json", function (json) {
 function setupAppearance() {
   const prefersDarkAppearance = window.matchMedia("(prefers-color-scheme: dark)");
   if (prefersDarkAppearance.matches) {
-    uiTableDark();
+    uiTableViewDark();
     $("#dark-appearance-switch").prop('checked', true);
   } else {
-    uiTableLight();
+    uiTableViewLight();
   }
 
   // Toggle dark appearance by listenning to system appearance changes
   prefersDarkAppearance.addEventListener("change", (e) => {
     if (e.matches) {
-      uiTableDark();
+      uiTableViewDark();
       $("#dark-appearance-switch").prop('checked', true);
     } else {
-      uiTableLight();
+      uiTableViewLight();
       $("#dark-appearance-switch").prop('checked', false);
     }
   });
 
   $("#dark-appearance-switch").on("change", function () {
-    this.checked ? uiTableDark() : uiTableLight();
+    this.checked ? uiTableViewDark() : uiTableViewLight();
   });
 }
