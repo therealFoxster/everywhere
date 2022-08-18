@@ -1,0 +1,18 @@
+.uiswitch {
+  background-color: rgba(233, 233, 234, 255);
+}
+
+#profile { margin-top: 10px !important; }
+#profile .icon {
+  min-width: 55px;
+  width: 55px;
+  margin: 5px 0 5px 14px;
+  border-radius: 100px ;
+}
+#profile .cell-text { font-size: 22px; }
+#profile .cell-detail-text { opacity: 1; }
+
+.grey.cell-accessory-icon .bi-chevron-right {
+  -webkit-text-stroke: 1px !important;
+  font-size: 14px !important;
+}

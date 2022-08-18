@@ -9,12 +9,31 @@
   <link rel="stylesheet" href="css/uiswitch.css">
   <link rel="stylesheet" href="css/uiswitch.2022.css">
   <link rel="stylesheet" href="https://foxster-mp4.github.io/css3-uitableview/src/uitableview.css">
-  <style>
-    .uiswitch { background-color: rgba(233, 233, 234, 255); }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="uitableview">
   <h1 id="title">Everywhere</h1>
+  <!-- Profile -->
+  <div class="section-container" id="profile">
+    <div class="rounded section">
+      <a class="clickable cell" onclick="(function() {
+        confirm('You shouldn\'t have clicked');
+        window.open('https:\/\/youtu.be/dQw4w9WgXcQ', '_blank');
+        // return false;
+      })()">
+        <img src="pfp.jpg" alt="pfp" class="icon">
+        <div class="cell-inner">
+          <div class="cell-labels">
+            <p class="cell-text">foxster.mp4</p>
+            <p class="cell-detail-text">i'm everywhere! well, mostly.</p>
+          </div>
+          <div class="grey cell-accessory-icon">
+            <i class="bi bi-chevron-right"></i>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
   <!-- Loading -->
   <div class="section-container" id="loading">
     <div class="rounded section">
@@ -80,7 +99,6 @@
   </div>
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <!-- Must not use with uitableview.auto-dark.css -->
   <script src="https://foxster-mp4.github.io/css3-uitableview/src/uitableview.js"></script>
   <script src="js/script.js"></script>
 </body>
