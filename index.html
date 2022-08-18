@@ -17,7 +17,7 @@
   <div class="section-container" id="profile">
     <div class="rounded section">
       <a class="clickable cell" onclick="(function() {
-        confirm('You shouldn\'t have clicked');
+        confirm(`Don't click ${Math.random() < 0.5 ? 'Cancel' : 'OK'}.`);
         window.open('https:\/\/youtu.be/dQw4w9WgXcQ', '_blank');
         // return false;
       })()">
