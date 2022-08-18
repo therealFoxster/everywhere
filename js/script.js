@@ -1,10 +1,6 @@
 const genericAppIcon = "icons/generic_app.jpeg";
 const accessoryIcon = "bi-arrow-up-right-square";
 
-$(window).on("load", function () {
-  $("html").css("visibility", "visible");
-});
-
 (() => {
   const darkSwitch = `
   <div class="section-container" id="dark">
@@ -91,6 +87,30 @@ $.getJSON("data.json", function (json) {
   });
 
   setupAppearance();
+
+  // Wait for all images to load before making page visible
+  $(function () {
+    const totalImages = $("img").length;
+    var imagesLoaded = 0;
+
+    // Step through each image in the DOM, clone it, attach an onload event
+    // listener, then set its source to the source of the original image. When
+    // that new image has loaded, fire the imageLoaded() callback.
+    $("img").each(function (_, image) {
+      var newImage = $("<img>"); // New <img> element that is NOT rendered to the DOM
+      newImage.on("load", imageLoaded); // Attach onload event
+      
+      const src = $(image).attr("src"); // Source (src) of image that is already in the DOM
+
+      // Set newImage's src to src of image from the DOM
+      newImage.attr("src", src); // Once this is done (fully loaded), imageLoaded() will get called
+    });
+
+    function imageLoaded() {
+      if (++imagesLoaded == totalImages) // All images loaded
+        $("html").css("visibility", "visible"); // Make page visible
+    }
+  });
 });
 
 function setupAppearance() {
