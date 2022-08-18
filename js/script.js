@@ -5,7 +5,7 @@ $(window).on("load", function () {
   $("html").css("visibility", "visible");
 });
 
-setupAppearance(); (() => {
+(() => {
   const darkSwitch = `
   <div class="section-container" id="dark">
     <div class="rounded section">
@@ -20,6 +20,7 @@ setupAppearance(); (() => {
   </div>`; 
   $("#title").after(darkSwitch);
 })();
+setupAppearance(); 
 
 $.getJSON("data.json", function (json) {
   const profile = json.profile;
