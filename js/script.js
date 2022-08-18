@@ -93,9 +93,6 @@ $.getJSON("data.json", function (json) {
     const totalImages = $("img").length;
     var imagesLoaded = 0;
 
-    // Step through each image in the DOM, clone it, attach an onload event
-    // listener, then set its source to the source of the original image. When
-    // that new image has loaded, fire the imageLoaded() callback.
     $("img").each(function (_, image) {
       var newImage = $("<img>"); // New <img> element that is NOT rendered to the DOM
       newImage.on("load", imageLoaded); // Attach onload event
@@ -103,7 +100,7 @@ $.getJSON("data.json", function (json) {
       const src = $(image).attr("src"); // Source (src) of image that is already in the DOM
 
       // Set newImage's src to src of image from the DOM
-      newImage.attr("src", src); // Once this is done (fully loaded), imageLoaded() will get called
+      newImage.attr("src", src); // Once this action is done (image fully loaded), imageLoaded() will get called
     });
 
     function imageLoaded() {
