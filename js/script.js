@@ -84,7 +84,7 @@ $.getJSON("data.json", function (json) {
       </div>
     </div>`;
 
-    $("#dark").before(sectionHTML);
+    $("#about").before(sectionHTML);
   });
 
   setupAppearance();
