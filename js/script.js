@@ -86,6 +86,7 @@ $.getJSON("data.json", function (json) {
   });
 
   setupAppearance();
+  $("html").css("visibility", "visible");
 });
 
 function setupAppearance() {
