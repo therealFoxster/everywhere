@@ -15,33 +15,35 @@
 </head>
 <body id="uitableview">
   <h1 id="title">Everywhere</h1>
-  <div class="rounded section-container" id="loading">
-    <div class="cell">
-      <div class="cell-icon">
-        <i class="bi bi-filetype-js"></i>
-      </div>
-      <div class="cell-inner">
-        <div class="cell-labels">
-          <p class="cell-text">Loading...</p>
+  <div class="section-container" id="loading">
+    <div class="rounded section">
+      <div class="cell">
+        <div class="cell-icon">
+          <i class="bi bi-filetype-js"></i>
+        </div>
+        <div class="cell-inner">
+          <div class="cell-labels">
+            <p class="cell-text">Loading...</p>
+          </div>
         </div>
       </div>
+      <p class="section-footer">The page is either taking really long to load or was not properly loaded. Please make sure JavaScript is enabled in browser settings. You can also try refreshing the page.</p>
     </div>
-    <p class="section-footer">The page is either taking really long to load or was not properly loaded. Please make sure JavaScript is enabled in browser settings. You can also try refreshing the page.</p>
   </div>
-  <div class="rounded section-container" id="dark">
-    <div class="section">
+  <div class="section-container" id="dark">
+    <div class="rounded section">
       <div class="cell">
-      <div class="cell-inner">
-        <p class="cell-text">Dark Appearance</p>
-        <input type="checkbox" class="uiswitch" id="dark-appearance-switch">
+        <div class="cell-inner">
+          <p class="cell-text">Dark Appearance</p>
+          <input type="checkbox" class="uiswitch" id="dark-appearance-switch">
+        </div>
       </div>
+      <p class="section-footer">This option will automatically adjust based on your system appearance. Disable this option to get blinded at night.</p>
     </div>
-    </div>
-    <p class="section-footer">This option will automatically adjust based on your system appearance. Disable this option to get blinded at night.</p>
   </div>
-  <div class="rounded section-container" id="about">
-    <p class="section-header">About</p>
-    <div class="section">
+  <div class="section-container" id="about">
+    <div class="rounded section">
+      <p class="section-header">About</p>
       <a class="clickable cell" href="https://github.com/foxster-mp4/everywhere" target="_blank">
         <div class="cell-icon">
           <i class="bi bi-github"></i>
@@ -70,8 +72,8 @@
           </div>
         </div>
       </a>
+      <p class="section-footer" style="text-align: center;">foxster, August 2022</p>
     </div>
-    <p class="section-footer" style="text-align: center;">foxster, August 2022</p>
   </div>
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

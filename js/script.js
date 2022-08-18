@@ -12,9 +12,9 @@ $.getJSON("data.json", function (json) {
 
   data.forEach(section => {
     let sectionHTML = `
-    <div class="section-container rounded">
-      <p class="section-header">${section.section}</p>
-      <div class="section">`;
+    <div class="section-container">
+      <div class="rounded section">
+        <p class="section-header">${section.section}</p>`
 
     section.accounts.forEach((account, i) => {
       const bootstrapIcon = account.bootstrapIcon ?? section.bootstrapIcon;
