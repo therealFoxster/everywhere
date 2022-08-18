@@ -1,8 +1,7 @@
 const genericAppIcon = "icons/generic_app.jpeg";
 const accessoryIcon = "bi-arrow-up-right-square";
 
-setupAppearance();
-(() => {
+setupAppearance(); (() => {
   const darkSwitch = `
   <div class="section-container" id="dark">
     <div class="rounded section">
@@ -16,7 +15,7 @@ setupAppearance();
     </div>
   </div>`; 
   $("#title").after(darkSwitch);
-})()
+})();
 
 $.getJSON("data.json", function (json) {
   const profile = json.profile;
