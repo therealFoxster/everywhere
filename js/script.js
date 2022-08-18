@@ -4,9 +4,31 @@ const accessoryIcon = "bi-arrow-up-right-square";
 setupAppearance();
 
 $.getJSON("data.json", function (json) {
-  const data = json.data;
+  const profile = json.profile;
+  if (profile) {
+    const profileHTML = `
+    <div class="section-container" id="profile">
+      <div class="rounded section">
+        <a class="clickable cell" onclick="performVeryImportantTask();">
+          <img src = "${profile.pfp}" alt ="pfp" class="icon">
+          <div class="cell-inner">
+            <div class="cell-labels">
+              <p class="cell-text">${profile.name ?? "Joe"}</p>
+              <p class="cell-detail-text">${profile.description ?? "Mama"}</p>
+            </div>
+            <div class="grey cell-accessory-icon">
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </div>
+        </a >
+      </div >
+    </div >`;
 
-  if (data != null && data != undefined) {
+    $("#title").after(profileHTML);
+  }
+  
+  const data = json.data;
+  if (data) {
     $("#loading").remove();
     $("#dark .cell").removeClass("disabled");
   }
@@ -76,4 +98,10 @@ function setupAppearance() {
   $("#dark-appearance-switch").on("change", function () {
     this.checked ? uiTableViewDark() : uiTableViewLight();
   });
+}
+
+function performVeryImportantTask() {
+  confirm(`Don't click ${Math.random() < 0.5 ? 'Cancel' : 'OK'}.`);
+  window.open('https:\/\/youtu.be/dQw4w9WgXcQ', '_blank');
+  // return false;
 }
