@@ -2,12 +2,12 @@
   "profile": {
     "name": "foxster.mp4",
     "description": "i'm everywhere! well, mostly.",
-    "pfp": "pfp.jpg"
+    "pfp": "img/pfp.jpg"
   },
   "data": [
     {
       "section": "GitHub",
-      "icon": "icons/github.png",
+      "icon": "img/icons/github.png",
       "bootstrapIcon": "github",
       "accounts": [
         {
@@ -24,7 +24,7 @@
     },
     {
       "section": "YouTube",
-      "icon": "icons/youtube.png",
+      "icon": "img/icons/youtube.png",
       "bootstrapIcon": "youtube",
       "accounts": [
         {
@@ -43,27 +43,27 @@
       "section": "Social network",
       "accounts": [
         {
-          "icon": "icons/instagram.png",
+          "icon": "img/icons/instagram.png",
           "bootstrapIcon": "instagram",
           "url": "https://www.instagram.com/foxster.ig/",
           "name": "foxster.ig"
         },
         {
-          "icon": "icons/reddit.png",
+          "icon": "img/icons/reddit.png",
           "bootstrapIcon": "reddit",
           "url": "https://www.reddit.com/user/therealFoxster",
           "name": "foxster.mp4",
           "description": "u/therealFoxster"
         },
         {
-          "icon": "icons/twitter.png",
+          "icon": "img/icons/twitter.png",
           "bootstrapIcon": "twitter",
           "url": "https://twitter.com/FoxsterPrivate",
           "name": "foxster.mp4",
           "description": "@FoxsterPrivate"
         },
         {
-          "icon": "icons/linkedin.png",
+          "icon": "img/icons/linkedin.png",
           "bootstrapIcon": "linkedin",
           "url": "https://www.linkedin.com/in/huybui-dev/",
           "name": "huybui-dev"

@@ -3,4 +3,4 @@ All of my links in one place. It's like Linktree but more lowkey, less flashy, a
 
 https://foxster-mp4.github.io/everywhere/
 
-<img src=".screenshot.png" alt="phone-browser-screenshot"/>
+<img src="img/.screenshot.png" alt="phone-browser-screenshots"/>
