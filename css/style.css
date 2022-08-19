@@ -1,6 +1,36 @@
-html { visibility: hidden; }
+/* html { visibility: hidden; } */
 .uiswitch {
   background-color: rgba(233, 233, 234, 255);
+}
+
+#uitableview.hidden {
+overflow-y: hidden;
+}
+#uitableview.hidden #content {
+  visibility: hidden;
+}
+#loading {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+#loading p {
+  text-align: center;
+  opacity: 0.5;
+  animation: show_tips 1s;
+}
+#loading p:first-of-type {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#loading p:first-of-type:after {
+  animation: loading 3s infinite;
+}
+#loading #tips {
+  margin: 8px;
 }
 
 #profile { margin-top: 10px !important; }
@@ -16,4 +46,28 @@ html { visibility: hidden; }
 .grey.cell-accessory-icon .bi-chevron-right {
   -webkit-text-stroke: 1px !important;
   font-size: 14px !important;
+}
+
+@keyframes loading {
+  0% {
+    content: "";
+  }
+  16.6666666667% {
+    content: ".";
+  }
+  33.3333333333% {
+    content: "..";
+  }
+  50% {
+    content: "...";
+  }
+  66.6666666667% {
+    content: "..";
+  }
+  83.3333333333% {
+    content: ".";
+  }
+  100% {
+    content: "";
+  }
 }

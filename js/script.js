@@ -43,10 +43,6 @@ $.getJSON("data.json", function (json) {
   }
   
   const data = json.data;
-  if (data) {
-    $("#loading").remove();
-  }
-  else return;
 
   data.forEach(section => {
     let sectionHTML = `
@@ -104,8 +100,10 @@ $.getJSON("data.json", function (json) {
     });
 
     function imageLoaded() {
-      if (++imagesLoaded == totalImages) // All images loaded
-        $("html").css("visibility", "visible"); // Make page visible
+      if (++imagesLoaded == totalImages) { // All images loaded
+        $("#loading").remove();
+        $("#uitableview").removeClass("hidden")
+      }
     }
   });
 });
