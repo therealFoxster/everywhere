@@ -1,43 +1,45 @@
-/* html { visibility: hidden; } */
 .uiswitch {
   background-color: rgba(233, 233, 234, 255);
 }
 
 #uitableview.hidden {
-overflow-y: hidden;
+  overflow-y: hidden;
 }
 #uitableview.hidden #content {
-  visibility: hidden;
+  display: none;
 }
+
 #loading {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  padding: 25px;
+  /* Center vertically */
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
+/* Text */
 #loading p {
   text-align: center;
   opacity: 0.5;
   animation: show_tips 1s;
 }
+/* Loading */
 #loading p:first-of-type {
   font-weight: 600;
   text-transform: uppercase;
 }
-#loading p:first-of-type:after {
-  animation: loading 3s infinite;
-}
+#loading p:first-of-type:after { animation: loading 3s infinite; }
+/* Tips */
 #loading #tips {
   margin: 8px;
 }
 
+/* Profile */
 #profile { margin-top: 10px !important; }
-#profile .icon {
+#profile .pfp {
   min-width: 55px;
   width: 55px;
-  margin: 5px 0 5px 14px;
+  margin: 5px 2px 5px 16px;
   border-radius: 100px ;
 }
 #profile .cell-text { font-size: 22px; }

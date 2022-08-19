@@ -25,7 +25,7 @@ $.getJSON("data.json", function (json) {
     <div class="section-container" id="profile">
       <div class="rounded section">
         <a class="clickable cell" onclick="performVeryImportantTask();">
-          <img src = "${profile.pfp}" alt ="pfp" class="icon">
+          <img src = "${profile.pfp}" alt ="pfp" class="pfp">
           <div class="cell-inner">
             <div class="cell-labels">
               <p class="cell-text">${profile.name ?? "Joe"}</p>
@@ -43,12 +43,11 @@ $.getJSON("data.json", function (json) {
   }
   
   const data = json.data;
-
   data.forEach(section => {
     let sectionHTML = `
     <div class="section-container">
       <div class="rounded section">
-        <p class="section-header">${section.section}</p>`
+        <p class="section-header">${section.section}</p>`;
 
     section.accounts.forEach((account, i) => {
       const bootstrapIcon = account.bootstrapIcon ?? section.bootstrapIcon;
