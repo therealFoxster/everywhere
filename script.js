@@ -101,7 +101,7 @@ $.getJSON("data.json", function (json) {
     function imageLoaded() {
       if (++imagesLoaded == totalImages) { // All images loaded
         $("#loading").remove();
-        $("#uitableview").removeClass("hidden")
+        $("#uitableview").removeClass("hidden");
       }
     }
   });
