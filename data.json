@@ -46,22 +46,19 @@
           "icon": "img/icons/instagram.png",
           "bootstrapIcon": "instagram",
           "url": "https://www.instagram.com/therealfoxster/",
-          "name": "Foxster",
-          "description": "@therealfoxster"
+          "name": "@therealfoxster"
         },
         {
           "icon": "img/icons/reddit.png",
           "bootstrapIcon": "reddit",
           "url": "https://www.reddit.com/user/therealFoxster",
-          "name": "Foxster",
-          "description": "u/therealFoxster"
+          "name": "u/therealFoxster"
         },
         {
           "icon": "img/icons/twitter.png",
           "bootstrapIcon": "twitter",
           "url": "https://twitter.com/therealFoxster",
-          "name": "Foxster",
-          "description": "@therealFoxster"
+          "name": "@therealFoxster"
         },
         {
           "icon": "img/icons/linkedin.png",
